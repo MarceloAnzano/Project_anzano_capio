@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1360707649 source:c:\users\amie\documents\claire\c++\project_anzano_capio\main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	"project.h"
+
+1360708812 c:\users\amie\documents\claire\c++\project_anzano_capio\project.h
+
