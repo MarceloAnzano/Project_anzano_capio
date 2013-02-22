@@ -7,3 +7,21 @@
 
 1360708812 c:\users\amie\documents\claire\c++\project_anzano_capio\project.h
 
+1361564958 source:c:\documents and settings\user\my documents\downloads\compressed\project_anzano_capio\project.cpp
+	"project.h"
+	<iostream>
+	<string>
+	<cstdlib>
+	<cmath>
+	<stdint.h>
+	<sstream>
+
+1361569925 c:\documents and settings\user\my documents\downloads\compressed\project_anzano_capio\project.h
+	<string>
+
+1361569766 source:c:\documents and settings\user\my documents\downloads\compressed\project_anzano_capio\main.cpp
+	"project.h"
+	<iostream>
+	<string>
+	<cstdlib>
+
