@@ -30,12 +30,14 @@ class project
         void max_path_sum_one(); //problem 18
         void counting_sundays(); //problem 19
         void factorial_digit_sum();//Problem 20
+        void name_scores(); //Problem 21
     protected:
     private:
         bool isPrime(int);
         int countFactors(int);
         void seive(int n);
         int sumDigits(string);
+        int getScore(string s);
 };
 
 #endif // PROJECT_H

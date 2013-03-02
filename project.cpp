@@ -4,7 +4,9 @@
 #include <cstdlib>
 #include <cmath>
 #include <stdint.h>
+#include <fstream>
 #include <sstream>
+#include <algorithm>
 #include <vector>
 #define limit 20
 #define MAX 200000
@@ -80,6 +82,13 @@ int project::sumDigits(string s)
     return answer;
 }
 
+int project::getScore(string s)
+{
+    int score = 0;
+    for(unsigned int i = 0; i < s.length(); i++)
+        score += (((int) s.at(i)) - 64);
+    return score;
+}
 
 /************************
         PUBLIC
@@ -954,4 +963,46 @@ void project::factorial_digit_sum()
     cout<<sumDigits(s) << endl;
     cout<<"-------------------------------------------------------------------------------"<<endl;
 }
+
+void project::name_scores()
+{
+    vector<string> names;
+    ifstream namesFile("names.txt");
+
+    char curChar;
+    string curName = "";
+
+    if(namesFile.is_open())
+        {
+            while(!namesFile.eof())
+                {
+                    curChar = namesFile.get();
+
+                    if(isalpha(curChar))
+                        curName.push_back(curChar);
+                    else
+                        {
+                            if(!curName.empty())
+                                {
+                                    names.push_back(curName);
+                                    curName.clear();
+                                }
+                        }
+                }
+        }
+    namesFile.close();
+
+    sort(names.begin(), names.end());
+
+    int total = 0;
+    for(unsigned int i = 0; i < names.size(); i++)
+        total += (getScore(names[i]) * (i+1));
+
+    cout<<"-------------------------------------------------------------------------------"<<endl;
+    cout<<"The name score is: ";
+    cout<<total<< endl;
+    cout<<"-------------------------------------------------------------------------------"<<endl;
+}
+
+
 
