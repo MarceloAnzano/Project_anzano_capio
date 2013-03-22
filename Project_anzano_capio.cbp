@@ -32,6 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BigInteger/BigInteger.cc" />
+		<Unit filename="BigInteger/BigInteger.hh" />
+		<Unit filename="BigInteger/BigIntegerAlgorithms.cc" />
+		<Unit filename="BigInteger/BigIntegerAlgorithms.hh" />
+		<Unit filename="BigInteger/BigIntegerLibrary.hh" />
+		<Unit filename="BigInteger/BigIntegerUtils.cc" />
+		<Unit filename="BigInteger/BigIntegerUtils.hh" />
+		<Unit filename="BigInteger/BigUnsigned.cc" />
+		<Unit filename="BigInteger/BigUnsigned.hh" />
+		<Unit filename="BigInteger/BigUnsignedInABase.cc" />
+		<Unit filename="BigInteger/BigUnsignedInABase.hh" />
+		<Unit filename="BigInteger/NumberlikeArray.hh" />
 		<Unit filename="main.cpp" />
 		<Unit filename="project.cpp" />
 		<Unit filename="project.h" />

@@ -34,7 +34,7 @@
 1363970673 d:\users\anzano-\documents\github\project_anzano_capio\project.h
 	<string>
 
-1363968032 source:d:\users\anzano-\documents\github\project_anzano_capio\project.cpp
+1363981228 source:d:\users\anzano-\documents\github\project_anzano_capio\project.cpp
 	"project.h"
 	<iostream>
 	<string>
@@ -45,4 +45,50 @@
 	<sstream>
 	<algorithm>
 	<vector>
+	"BigInteger/BigIntegerLibrary.hh"
+
+1272620072 source:d:\users\anzano-\documents\github\project_anzano_capio\biginteger\biginteger.cc
+	"BigInteger.hh"
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\biginteger.hh
+	"BigUnsigned.hh"
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigunsigned.hh
+	"NumberlikeArray.hh"
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\numberlikearray.hh
+
+1272620072 source:d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigintegeralgorithms.cc
+	"BigIntegerAlgorithms.hh"
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigintegeralgorithms.hh
+	"BigInteger.hh"
+
+1272620072 source:d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigintegerutils.cc
+	"BigIntegerUtils.hh"
+	"BigUnsignedInABase.hh"
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigintegerutils.hh
+	"BigInteger.hh"
+	<string>
+	<iostream>
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigunsignedinabase.hh
+	"NumberlikeArray.hh"
+	"BigUnsigned.hh"
+	<string>
+
+1272620072 source:d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigunsigned.cc
+	"BigUnsigned.hh"
+
+1272620072 source:d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigunsignedinabase.cc
+	"BigUnsignedInABase.hh"
+
+1272620072 d:\users\anzano-\documents\github\project_anzano_capio\biginteger\bigintegerlibrary.hh
+	"NumberlikeArray.hh"
+	"BigUnsigned.hh"
+	"BigInteger.hh"
+	"BigIntegerAlgorithms.hh"
+	"BigUnsignedInABase.hh"
+	"BigIntegerUtils.hh"
 
