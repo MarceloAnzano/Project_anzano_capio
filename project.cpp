@@ -14,6 +14,8 @@ bool composite [MAX+1];
 vector <int> primes;
 #define LL	long long
 #define LIMIT	1000
+#define sz 1000001
+#define mx 1001
 
 using namespace std;
 
@@ -29,6 +31,51 @@ project::~project()
 /************************
         PRIVATE
 ************************/
+bool p[sz];
+    long primeTable[78500],nPrime = 0;
+
+void project::sievefor23()
+    {
+        int i,j;
+
+        p[0] = p[1] = true;
+        for( i = 4; i <= sz; i += 2 )
+        p[i] = true;
+
+        primeTable[nPrime++] = 2;
+
+        for( i = 3; i <= mx; i += 2 )
+        {
+            if(!p[i])
+            {
+                primeTable[nPrime++] = i;
+                for( j = i * i; j <= sz; j += i )
+                p[j] = true;
+            }
+        }
+
+        for( i = mx + 2; i <= sz; i += 2 )
+        {
+            if(!p[i])
+            {
+                primeTable[nPrime++] = i;
+            }
+        }
+    }
+
+    bool isTruncatable(long n)
+    {
+        long pow = 10;
+
+        while( pow < n)
+        {
+            if(p[n%pow] || p[n/pow])
+            return false;
+            pow *= 10;
+        }
+
+        return true;
+    }
 
 bool project::isPrime(int num)
 {
@@ -44,6 +91,7 @@ bool project::isPrime(int num)
     }
     return true;
 }
+
 
 int project::countFactors(int f)
 {
@@ -1002,6 +1050,47 @@ void project::name_scores()
     cout<<"The name score is: ";
     cout<<total<< endl;
     cout<<"-------------------------------------------------------------------------------"<<endl;
+}
+
+void project::first_1000_digit_fibonacci()
+{
+    /***DIGITS*****/
+    int digits=1000;
+    /*************/
+    double gRatio=0, number=0;
+
+    //formula
+    gRatio = (1+sqrt(5))/2;
+    number = (log(10)*(digits-1) + (log(5))/2);
+    number = number/log(gRatio);
+
+    //rounding
+    number = ceil(number);
+
+    cout<<"-------------------------------------------------------------------------------"<<endl;
+    cout<<"The first 1000-digit Fibonacci number is: ";
+    cout<<number<<endl;
+    cout<<"-------------------------------------------------------------------------------"<<endl;
+}
+
+void project::truncable_primes()
+{
+    long i,ans = 0;
+
+    sievefor23();
+
+    for( i = 4; i < nPrime; i++)
+    {
+        if( isTruncatable(primeTable[i]) )
+        {
+            ans += primeTable[i];
+        }
+    }
+    cout<<"-------------------------------------------------------------------------------"<<endl;
+    cout<<"Sum of 11 truncatable primes is: ";
+    cout<<ans<<endl;
+    cout<<"-------------------------------------------------------------------------------"<<endl;
+
 }
 
 

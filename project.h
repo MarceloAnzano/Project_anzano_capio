@@ -31,8 +31,11 @@ class project
         void counting_sundays(); //problem 19
         void factorial_digit_sum();//Problem 20
         void name_scores(); //Problem 21
+        void first_1000_digit_fibonacci(); //Problem 22
+        void truncable_primes(); //Problem 23
     protected:
     private:
+        void sievefor23();
         bool isPrime(int);
         int countFactors(int);
         void seive(int n);
